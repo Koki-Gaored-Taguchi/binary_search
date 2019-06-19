@@ -9,7 +9,7 @@ unsigned int p(unsigned int x){
     int L=0;
     int i;
     for(i=0; i<n; i++){
-        L=L+(((A[i]-1)/x)+1);
+        L+=(((A[i]-1)/x)+1);
     }
     return L<=k;
 }
@@ -24,7 +24,7 @@ int main(){
  
 
     
-    int Sum;
+    int Sum=0;
     for(i=0; i<n; i++){
         Sum=Sum+A[i];
     }
@@ -32,7 +32,7 @@ int main(){
     for (i=1; i<n; i++){
         if(A[i]>Max){Max=A[i];}
     }
-    lb=Sum/k;
+    lb=(Sum/k)-1;
     ub=Max;
     while(ub-lb>1){
         int m=(ub+lb)/2;

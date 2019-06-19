@@ -9,12 +9,12 @@ unsigned int p(int x){
     int i=0;
     while(i<n){
         int H=0;
-        while(H<=x){
-            H=H+A[i];
-            i=i+1;
+        while(1){
+            H+=A[i];
+            if(H<=x){i+=1;}
+            else{break;}
     }
-        L=L+1;
-        i=i-1;
+        L+=1;
 }
     return L<=k;
 }

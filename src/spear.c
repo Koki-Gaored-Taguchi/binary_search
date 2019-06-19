@@ -9,7 +9,7 @@ unsigned int p(unsigned int x){
     int L=0;
     int i;
     for(i=0; i<n; i++){
-        L=L+(A[i]/x);
+        L+=(A[i]/x);
         
     }
     return L>=k;
@@ -22,11 +22,11 @@ int main(){
   for(i = 0; i < n; i++){
     scanf("%d", &A[i]);
   }
-    int Sum;
+    int Sum=0;
     for(i=0; i<n; i++){
         Sum=Sum+A[i];
     }
-    ub=Sum/k;
+    ub=(Sum/k)+1;
     int Max=A[0];
     for (i=1; i<n; i++){
         if(A[i]>Max){Max=A[i];}
