@@ -22,7 +22,7 @@ int main(){
   for(i = 0; i < n; i++){
     scanf("%d", &A[i]);
   }
-    int Sum=0;
+    long long int Sum=0;
     for(i=0; i<n; i++){
         Sum=Sum+A[i];
     }

@@ -4,6 +4,8 @@ int n;
 int k;
 int A[100000];
 
+
+
 unsigned int p(int x){
     int L=0;
     int i=0;
@@ -11,7 +13,7 @@ unsigned int p(int x){
         int H=0;
         while(1){
             H+=A[i];
-            if(H<=x){i+=1;}
+            if(H<=x && i!=n-1){i+=1;}
             else{break;}
     }
         L+=1;
@@ -21,17 +23,20 @@ unsigned int p(int x){
 
 
 int main(){
-  int i, lb, ub;
-  scanf("%d%d", &n, &k);
+    int i, lb, ub;
+    scanf("%d%d", &n, &k);
+    printf("%d%d",n,k);
+
   for(i = 0; i < n; i++){
     scanf("%d", &A[i]);
+      printf("%d%d",i,n);
   }
     int Max=A[0];
     for (i=1; i<n; i++){
         if(A[i]>Max){Max=A[i];}
     }
     lb=Max-1;
-    int Sum;
+    long long int Sum=0;
     for(i=0; i<n; i++){
         Sum=Sum+A[i];
     }
