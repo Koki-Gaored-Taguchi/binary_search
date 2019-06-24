@@ -9,14 +9,15 @@ int A[100000];
 unsigned int p(int x){
     int L=0;
     int i=0;
-    while(i<n){
+    while(i<=n){
         int H=0;
         while(1){
             H+=A[i];
-            if(H<=x && i!=n-1){i+=1;}
+            if(H<=x){i+=1;}
             else{break;}
     }
         L+=1;
+        if(i==n){break;}
 }
     return L<=k;
 }
@@ -25,11 +26,10 @@ unsigned int p(int x){
 int main(){
     int i, lb, ub;
     scanf("%d%d", &n, &k);
-    printf("%d%d",n,k);
 
   for(i = 0; i < n; i++){
     scanf("%d", &A[i]);
-      printf("%d%d",i,n);
+      
   }
     int Max=A[0];
     for (i=1; i<n; i++){
