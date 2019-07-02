@@ -15,14 +15,14 @@ unsigned int p(unsigned int x){
 }
 
 int main(){
-  int i, lb, ub;
-  scanf("%d%d", &n, &k);
-  for(i = 0; i < n; i++){
-    scanf("%d", &A[i]);
-  }
-
- 
-
+    int i, lb, ub;
+    scanf("%d%d", &n, &k);
+    for(i = 0; i < n; i++){
+        scanf("%d", &A[i]);
+    }
+    
+    
+    
     
     long long int Sum=0;
     for(i=0; i<n; i++){
@@ -32,7 +32,8 @@ int main(){
     for (i=1; i<n; i++){
         if(A[i]>Max){Max=A[i];}
     }
-    lb=(Sum/k)-1;
+    if (Sum/k<=1){lb=0;}
+    else{lb=(Sum/k)-1;}
     ub=Max;
     while(ub-lb>1){
         int m=(ub+lb)/2;
@@ -40,5 +41,5 @@ int main(){
         else{lb=m;}
     }
     printf("%d\n", ub);
-  return 0;
+    return 0;
 }
